@@ -55,6 +55,8 @@ body {
     background: transparent;
     border: 2px solid white;
     color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
 }
 
 input {
