@@ -117,10 +117,6 @@ function iniciarJuego() {
     
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
-    
-    
-
-    
     botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
@@ -131,8 +127,7 @@ function seleccionarMascotaJugador() {
     
     //sectionSeleccionarAtaque.style.display = 'flex'
     sectionVerMapa.style.display = 'flex'
-    intervalo = setInterval(pintarPersonaje, 50)
-    
+    iniciarMapa()
     
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
@@ -324,22 +319,18 @@ function pintarPersonaje() {
 }
 
 function moverDerecha() {
-    capipepo.x = capipepo.x + 5
     capipepo.velocidadX = 5
 }
 
 function moverIzquierda() {
-    capipepo.x = capipepo.x - 5
     capipepo.velocidadX = -5
 }
 
 function moverAbajo() {
-    capipepo.y = capipepo.y + 5
     capipepo.velocidadY = 5
 }
 
 function moverArriba() {
-    capipepo.y = capipepo.y - 5
     capipepo.velocidadY = -5
 }
 
@@ -348,6 +339,31 @@ function detenerMovimiento() {
     capipepo.velocidadY = 0
 }
 
+function sePresionoUnaTecla(event) {
+    switch (event.key) {
+        case 'ArrowUp':
+            moverArriba()
+            break
+        case 'ArrowDown':
+            moverAbajo()
+            break
+        case 'ArrowLeft':
+            moverIzquierda()
+            break
+        case 'ArrowRight':
+            moverDerecha()
+            break
+        default:
+            break
+    }
+}
 
+function iniciarMapa() {
+    intervalo = setInterval(pintarPersonaje, 50)
+    
+    window.addEventListener('keydown', sePresionoUnaTecla)
+
+    window.addEventListener('keyup', detenerMovimiento)
+}
 
 window.addEventListener('load', iniciarJuego)
