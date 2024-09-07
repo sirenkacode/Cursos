@@ -18,7 +18,6 @@ const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 const contenedorAtaques = document.getElementById('contenedorAtaques')
 
 let mokepones = []
-let ataqueJugador
 let ataqueEnemigo
 let opcionDeMokepones
 let inputHipodoge
@@ -29,6 +28,8 @@ let ataquesMokepon
 let botonFuego
 let botonAgua
 let botonTierra
+let botones = []
+let ataqueJugador = []
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -134,41 +135,41 @@ function extraerAtaques(mascotaJugador) {
 
 function mostrarAtaques(ataques) {
     ataques.forEach((ataque) => {
-        ataquesMokepon = `<button class="boton-de-ataque" id=${ataque.id}>${ataque.nombre}</button>`
+        ataquesMokepon = `<button class="boton-de-ataque BAtaque" id=${ataque.id}>${ataque.nombre}</button>`
         contenedorAtaques.innerHTML += ataquesMokepon
     })
     botonFuego = document.getElementById('boton-fuego')
     botonAgua = document.getElementById('boton-agua')
     botonTierra = document.getElementById('boton-tierra')
     
+    botones = document.querySelectorAll('.BAtaque')
 
-    botonFuego.addEventListener('click', ataqueFuego)
-    
-    botonAgua.addEventListener('click', ataqueAgua)
-    
-    botonTierra.addEventListener('click', ataqueTierra)
+}
 
+function secuenciaAtaque () {
+    botones.forEach((boton) => {
+        boton.addEventListener('click', (e) => {
+            if (e.target.textContent === '🔥') {
+                ataqueJugador.push('FUEGO')
+                boton.style.background = '#112f58'
+            } else if (e.target.textContent === '💧') {
+                ataqueJugador.push('AGUA')
+                boton.style.background = '#112f58'
+            } else {
+                ataqueJugador.push('TIERRA')
+                boton.style.background = '#112f58'
+            }
+        })
+    })
 }
 
 function seleccionarMascotaEnemigo() {
     let mascotaAleatoria = aleatorio(0, mokepones.length -1)
     
     spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatoria].nombre
-    
+    secuenciaAtaque ()
 }
 
-function ataqueFuego() {
-    ataqueJugador = 'FUEGO'
-    ataqueAleatorioEnemigo()
-}
-function ataqueAgua() {
-    ataqueJugador = 'AGUA'
-    ataqueAleatorioEnemigo()
-}
-function ataqueTierra() {
-    ataqueJugador = 'TIERRA'
-    ataqueAleatorioEnemigo()
-}
 
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3)
