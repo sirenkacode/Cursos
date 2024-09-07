@@ -317,7 +317,7 @@ function pintarCanvas() {
         0,
         0,
         mapa.width,
-        mapa.height
+        mapa.height,
     )
     lienzo.drawImage(
         mascotaJugadorObjeto.mapaFoto,
@@ -345,8 +345,8 @@ function moverArriba() {
 }
 
 function detenerMovimiento() {
-    mascotaJugadorObjeto.velocidadX = 0
-    mascotaJugadorObjeto.velocidadY = 0
+    mascotaJugador.velocidadX = 0
+    mascotaJugador.velocidadY = 0
 }
 
 function sePresionoUnaTecla(event) {
@@ -372,7 +372,6 @@ function iniciarMapa() {
     mapa.width = 320
     mapa.height = 240
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
-    console.log(mascotaJugadorObjeto, mascotaJugador);
     intervalo = setInterval(pintarCanvas, 50)
     
     window.addEventListener('keydown', sePresionoUnaTecla)
@@ -385,7 +384,6 @@ function obtenerObjetoMascota() {
         if (mascotaJugador === mokepones[i].nombre) {
             return mokepones[i]
         }
-        
     }
 }
 
