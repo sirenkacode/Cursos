@@ -1,5 +1,5 @@
 $primary-color: #FFEFE7;
-$secondary-color: #ffefd8;
+$secondary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
 $primary-text-color: #7c6a0a;
 $quaternion-color: #FA9500;
@@ -9,7 +9,7 @@ $paragraph-size: 1.5em;
 body {
     margin: 0px;
     padding: 0px;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     font-family: $font-stack;
 }
 
@@ -40,6 +40,7 @@ article {
     padding-left: 45px;
     padding-right: 45px;
     display: flex;
+    padding-top: 70px;
     justify-content: space-between;
     .impact-section {
         display: flex;
@@ -68,6 +69,37 @@ article {
         width: 25vw;
         border-radius: 19px;
     }
+}
+
+section {
+    width: 100%;
+    height: auto;
+    padding: 60px;
+    h2 {
+        color: $primary-text-color;
+        font-size: 2em;
+    }
+    .healthcare {
+        h2 {
+            font-weight: 300;
+            padding-bottom: 60px;
+        }
+        .product-card {
+            width: 12vw;
+            height: auto;
+            background-color: $secondary-color;
+            color: $primary-text-color;
+            padding: 20px;
+            border-radius: 8px;
+            img {
+                width:200px;
+                height: 250px;
+                background-image: cover;
+                border-radius: 6px;
+            }
+        }
+    }
+
 }
 
 footer {

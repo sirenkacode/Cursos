@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #ffefd8;
+  background-color: #FFEFE7;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -32,6 +32,7 @@ article {
   padding-left: 45px;
   padding-right: 45px;
   display: flex;
+  padding-top: 70px;
   justify-content: space-between;
 }
 article .impact-section {
@@ -60,6 +61,34 @@ article button {
 article img {
   width: 25vw;
   border-radius: 19px;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 60px;
+}
+section h2 {
+  color: #7c6a0a;
+  font-size: 2em;
+}
+section .healthcare h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+section .healthcare .product-card {
+  width: 12vw;
+  height: auto;
+  background-color: #FFDAC6;
+  color: #7c6a0a;
+  padding: 20px;
+  border-radius: 8px;
+}
+section .healthcare .product-card img {
+  width: 200px;
+  height: 250px;
+  background-image: cover;
+  border-radius: 6px;
 }
 
 footer {
