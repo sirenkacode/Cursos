@@ -71,6 +71,9 @@ article {
         border-radius: 35px;
         color: white;
         font-size: 1em;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     img {
         width: 25vw;
@@ -103,7 +106,7 @@ section {
 
         .product-card {
             width: 14vw;
-            height: 23vw;
+            height: 55vh;
             background-color: $secondary-color;
             color: $primary-text-color;
             padding: 20px;
@@ -154,7 +157,7 @@ section {
         font-weight: bold;
         padding-bottom: 60px;
     }
-    .mision-section {
+    .mission-section {
         @include flexCenter(row, space-evenly, center);
         .earth {
             width: 40vw;
@@ -173,6 +176,26 @@ section {
     .innovation {
         @extend .earth;
     }
+}
+
+.gallery {
+    h2 {
+        font-weight: bold;
+        padding-bottom:60px;
+    }
+   .gallery-images {
+        @include flexCenter(row, space-between, center);
+        img {
+            width: 28vw;
+            height: 45vh;
+            object-fit: cover;
+            object-position: 5px 35%;
+            border-radius: 16px;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+   }
 }
 
 footer {
