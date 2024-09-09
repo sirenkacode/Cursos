@@ -1,13 +1,15 @@
 $primary-color: #FFEFE7;
-$secondary-color: #fffbc6;
+$secondary-color: #ffefd8;
 $tertiary-color: #BABD8D;
 $primary-text-color: #7c6a0a;
-$font-stack: 'IBM Plex Sans', sans-serif;;
+$quaternion-color: #FA9500;
+$font-stack: 'IBM Plex Sans', sans-serif;
+$paragraph-size: 1.5em;
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     font-family: $font-stack;
 }
 
@@ -19,7 +21,7 @@ nav {
     color: $primary-text-color;
     padding: 15px;
     p {
-        font-size: 1.5em;
+        font-size: $paragraph-size;
         padding-left: 30px;
     }
     .icons {
@@ -29,6 +31,42 @@ nav {
             background: none;
             border-style: none;
         }
+    }
+}
+
+article {
+    width: auto;
+    color: $primary-text-color;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: space-between;
+    .impact-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        gap: 25px;
+    }
+    h1 {
+        font-size: 3em;
+        padding: 0px;
+        margin: 0px;
+    }
+    p {
+        font-size: $paragraph-size;
+    }
+    button {
+        width: 12vw;
+        padding: 20px;
+        background-color: $quaternion-color;
+        border-style: none;
+        border-radius: 35px;
+        color: white;
+        font-size: 1em;
+    }
+    img {
+        width: 25vw;
+        border-radius: 19px;
     }
 }
 
