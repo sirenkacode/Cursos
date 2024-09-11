@@ -21,6 +21,8 @@
 // Conversión de tipos implícita: Los operadores == y != realizan conversiones de tipo implícitas antes de la comparación. 
 //Por ejemplo, 5 == "5" es true porque JavaScript convierte la cadena "5" en el número 5 antes de compararlos.
 
+/*----------------------------------------------------------------------*/
+
 // ejecucion condicional : if
 
 
@@ -33,6 +35,8 @@
 // } else {
 //     console.log("nombre no encontrado");
 // }
+
+/*----------------------------------------------------------------------*/
 
 // ejecucion condicional: switch
 
@@ -69,6 +73,8 @@
 
 // console.log("hay algo mas que desees?")
 
+/*----------------------------------------------------------------------*/
+
 // loop for
 // for (variable; condicion; incremento) {
 //     codigoAEjecutar
@@ -80,6 +86,8 @@
 //     console.log(list[i])
 // }
 
+/*----------------------------------------------------------------------*/
+
 /* loop for of
  for  of arrays, strings, [algo]
 
@@ -88,8 +96,35 @@
  }
 */
 
-let canasta = ["manzana", "pera", "naranja", "uva"];
+// let canasta = ["manzana", "pera", "naranja", "uva"];
 
-for (fruta of canasta) {
-    console.log(fruta)
+// for (fruta of canasta) {
+//     console.log(fruta)
+// }
+
+/*----------------------------------------------------------------------*/
+
+// loop for in : objetos
+/*
+propiedades = valor
+array string
+item
+for (variable in objeto) {
+codigo 
+}
+*/
+
+const listaDeCompras = {
+    manzana: 5,
+    pera: 3,
+    naranja: 2,
+    uva: 1
+}
+
+for (fruta in listaDeCompras) {
+    console.log(fruta);
+}
+
+for (fruta in listaDeCompras) {
+    console.log (`${fruta}: ${listaDeCompras[fruta]}`)
 }
