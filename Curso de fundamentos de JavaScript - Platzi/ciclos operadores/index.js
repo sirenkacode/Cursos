@@ -47,24 +47,35 @@
 //         // codigo 
 // } 
 
-let expr = "papayas"
+// let expr = "papayas"
 
-switch(expr) {
-    case "naranjas":
-    console.log("las naranjas cuestas 10 pesos el kilo")
-    break;
-    case "manzanas":
-    console.log("las manzanas cuestan 45 pesos el kilo")
-    break;
-    case "platanos":
-        console.log("el platano esta a 30 pesos el kilo")
-    break;
-    case "mangos":
-    case "papayas":
-    console.log("los mangos y las papayas cuestan 25 pesos el kilo")
-    break;
-    default:
-    console.log("lo siento, no contamos con ${expr}");
+// switch(expr) {
+//     case "naranjas":
+//     console.log("las naranjas cuestas 10 pesos el kilo")
+//     break;
+//     case "manzanas":
+//     console.log("las manzanas cuestan 45 pesos el kilo")
+//     break;
+//     case "platanos":
+//         console.log("el platano esta a 30 pesos el kilo")
+//     break;
+//     case "mangos":
+//     case "papayas":
+//     console.log("los mangos y las papayas cuestan 25 pesos el kilo")
+//     break;
+//     default:
+//     console.log("lo siento, no contamos con ${expr}");
+// }
+
+// console.log("hay algo mas que desees?")
+
+// loop for
+// for (variable; condicion; incremento) {
+//     codigoAEjecutar
+// }
+
+let list = ["eat", "sleep", "code", "repeat"];
+
+for (let i = 0; i < list.length; i++) {
+    console.log(list[i])
 }
-
-console.log("hay algo mas que desees?")
