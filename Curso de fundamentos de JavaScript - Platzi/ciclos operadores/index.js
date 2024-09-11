@@ -74,8 +74,22 @@
 //     codigoAEjecutar
 // }
 
-let list = ["eat", "sleep", "code", "repeat"];
+// let list = ["eat", "sleep", "code", "repeat"];
 
-for (let i = 0; i < list.length; i++) {
-    console.log(list[i])
+// for (let i = 0; i < list.length; i++) {
+//     console.log(list[i])
+// }
+
+/* loop for of
+ for  of arrays, strings, [algo]
+
+ for (variable of objeto) {
+ codigo
+ }
+*/
+
+let canasta = ["manzana", "pera", "naranja", "uva"];
+
+for (fruta of canasta) {
+    console.log(fruta)
 }
