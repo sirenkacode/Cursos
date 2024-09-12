@@ -136,9 +136,24 @@ codigo
 }
 */
 
-let contador = 0;
+// let contador = 0;
 
-while (contador , 10) {
+// while (contador , 10) {
+//     console.log(contador)
+//     contador ++;
+// }
+
+/* loop do while
+ do {
+ codigo
+ while (condicion)
+ }
+
+*/
+
+let contador = 0
+
+do {
     console.log(contador)
-    contador ++;
-}
+    contador++;
+} while(contador < 10);
