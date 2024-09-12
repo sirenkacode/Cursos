@@ -46,39 +46,64 @@ objeto {
 
 // herencia en la practica 
 
-class Animal {
-    constructor(nombre, tipo) {
+// class Animal {
+//     constructor(nombre, tipo) {
+//         this.nombre = nombre;
+//         this.tipo = tipo;
+//     }
+//     emitirSonido() {
+//         console.log('El animal emite un sonido');
+//     }
+// }
+
+// class Perro extends Animal {
+//     constructor(nombre, tipo, raza) {
+//         super(nombre, tipo);
+//         this.raza = raza;
+//     }
+//     emitirSonido() {
+//         console.log('el perro ladra');
+//     }
+//     correr() {
+//         console.log(`${this.nombre} corre alegremente`);
+//     }
+// }
+
+// const perro1 = new Perro('bobby', 'perro', 'pug');
+
+// console.log(perro1);
+// perro1.correr();
+// perro1.emitirSonido();
+
+// perro1.nuevoMetodo = function() {
+//     console.log('este es un nuevo metodo');
+// };
+
+// perro1.prototype.segundoMetodo = function () {
+//     console.log('es otro nuevo metodo');
+// };
+
+
+// this en javascript
+
+/* 
+this --- class
+
+this ---- class ---- class
+
+*/
+
+class Persona {
+    constuctor(nombre, edad) {
         this.nombre = nombre;
-        this.tipo = tipo;
-    }
-    emitirSonido() {
-        console.log('El animal emite un sonido');
+        this.edad = edad;
     }
 }
 
-class Perro extends Animal {
-    constructor(nombre, tipo, raza) {
-        super(nombre, tipo);
-        this.raza = raza;
-    }
-    emitirSonido() {
-        console.log('el perro ladra');
-    }
-    correr() {
-        console.log(`${this.nombre} corre alegremente`);
-    }
+const persona1 = new Persona('alice', '25')
+
+console.log(persona1); 
+
+Persona.nuevoMetodo = function() {
+    console.log(`Mi nombre es ${this.nombre}`);
 }
-
-const perro1 = new Perro('bobby', 'perro', 'pug');
-
-console.log(perro1);
-perro1.correr();
-perro1.emitirSonido();
-
-perro1.nuevoMetodo = function() {
-    console.log('este es un nuevo metodo');
-};
-
-perro1.prototype.segundoMetodo = function () {
-    console.log('es otro nuevo metodo');
-};
