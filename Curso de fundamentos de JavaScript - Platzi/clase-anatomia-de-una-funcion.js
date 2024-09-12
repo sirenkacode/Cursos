@@ -6,8 +6,8 @@ function calculateDiscountedPrice (price, discountPercentage) {
 }
 
 const originalPrice = 100
-const finalPrice = calculateDiscountedPrice (originalPrice, discountPercentage)
 const discountedPercentage = 20
+const finalPrice = calculateDiscountedPrice (originalPrice, discountPercentage)
 
 
 console.log('Original price: $' + originalPrice)
