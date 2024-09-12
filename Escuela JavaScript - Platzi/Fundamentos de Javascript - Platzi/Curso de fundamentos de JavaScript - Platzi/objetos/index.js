@@ -93,17 +93,17 @@ this ---- class ---- class
 
 */
 
-class Persona {
-    constuctor(nombre, edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-}
+// class Persona {
+//     constuctor(nombre, edad) {
+//         this.nombre = nombre;
+//         this.edad = edad;
+//     }
+// }
 
-const persona1 = new Persona('alice', '25')
+// const persona1 = new Persona('alice', '25')
 
-console.log(persona1); 
+// console.log(persona1); 
 
-Persona.nuevoMetodo = function() {
-    console.log(`Mi nombre es ${this.nombre}`);
-}
+// Persona.nuevoMetodo = function() {
+//     console.log(`Mi nombre es ${this.nombre}`);
+// }
