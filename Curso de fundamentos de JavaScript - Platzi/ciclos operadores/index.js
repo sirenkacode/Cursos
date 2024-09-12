@@ -151,9 +151,9 @@ codigo
 
 */
 
-let contador = 0
+// let contador = 0
 
-do {
-    console.log(contador)
-    contador++;
-} while(contador < 10);
+// do {
+//     console.log(contador)
+//     contador++;
+// } while(contador < 10);
