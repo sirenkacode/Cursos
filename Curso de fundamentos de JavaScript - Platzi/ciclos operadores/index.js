@@ -114,17 +114,31 @@ codigo
 }
 */
 
-const listaDeCompras = {
-    manzana: 5,
-    pera: 3,
-    naranja: 2,
-    uva: 1
-}
+// const listaDeCompras = {
+//     manzana: 5,
+//     pera: 3,
+//     naranja: 2,
+//     uva: 1
+// }
 
-for (fruta in listaDeCompras) {
-    console.log(fruta);
-}
+// for (fruta in listaDeCompras) {
+//     console.log(fruta);
+// }
 
-for (fruta in listaDeCompras) {
-    console.log (`${fruta}: ${listaDeCompras[fruta]}`)
+// for (fruta in listaDeCompras) {
+//     console.log (`${fruta}: ${listaDeCompras[fruta]}`)
+// }
+
+// loop while
+/*
+while(condicion) {
+codigo
+}
+*/
+
+let contador = 0;
+
+while (contador , 10) {
+    console.log(contador)
+    contador ++;
 }
