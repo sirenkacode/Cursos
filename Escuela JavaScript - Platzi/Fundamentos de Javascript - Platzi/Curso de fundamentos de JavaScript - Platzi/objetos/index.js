@@ -30,16 +30,48 @@ objeto {
 
 // que es una clase ?
 
-class Persona {
-    constructor(nombre, edad) {
+// class Persona {
+//     constructor(nombre, edad) {
+//         this.nombre = nombre;
+//         this.edad = edad;
+//     }
+//     saludar () {
+//         console.log(`hola, mi nombre es ${this.nombre} y tengo ${this.edad}`)
+//     }
+// }
+
+// const persona1 = new Persona('mariana', '25');
+
+// persona1.saludar();
+
+// herencia en la practica 
+
+class Animal {
+    constructor(nombre, tipo) {
         this.nombre = nombre;
-        this.edad = edad;
+        this.tipo = tipo;
     }
-    saludar () {
-        console.log(`hola, mi nombre es ${this.nombre} y tengo ${this.edad}`)
+    emitirSonido() {
+        console.log('El animal emite un sonido');
     }
 }
 
-const persona1 = new Persona('mariana', '25');
+class Perro extends Animal {
+    constructor(nombre, tipo, raza) {
+        super(nombre, tipo);
+        this.raza = raza;
+    }
+    emitirSonido() {
+        console.log('el perro ladra');
+    }
+    correr() {
+        console.log(`${this.nombre} corre alegremente`);
+    }
+}
 
-persona1.saludar();
+const perro1 = new Perro('bobby', 'perro', 'pug');
+
+console.log(perro1);
+perro1.correr();
+perro1.emitirSonido();
+
