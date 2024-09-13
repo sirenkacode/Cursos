@@ -174,6 +174,6 @@ postList.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
         const postId = event.target.closest('acticle').id;
         console.log(postId);
-        sendHTTPRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts', `${postId}`)
+        sendHTTPRequest('DELETE', `https://jsonplaceholder.typicode.com/posts/${postId}`)
     }
 });
