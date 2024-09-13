@@ -103,6 +103,12 @@ Las promesas se pueden encadenar utilizando los mÃ©todos then() y catch(). El mÃ
 
 // metodo GET en JavaScript
 
+const listElement = document.querySelector(".posts");
+const postTemplate = document.getElementById("single-post");
+const form = document.querySelector("#new-post form");
+const fetchButton = document.querySelector("#available-posts button");
+const postList = document.querySelector("#posts-container");
+
 function sendHTTPRequest(method, url, data) {
     return fetch(url, {
         method: method,
@@ -142,3 +148,23 @@ async function fetchPosts() {
     }
 }
 
+fetchButton.addEventListener("click", fetchPosts);
+
+async function createPost(title, content) {
+  const userId = Math.random();
+  const post = {
+    title: title,
+    body: content,
+    userId: userId,
+  };
+
+  sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const title = event.currentTarget.querySelector("#title").value;
+  const content = event.currentTarget.querySelector("#content").value;
+
+  createPost(title, content);
+});
