@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* Fuente cursiva bonita */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+/* Estilo de las secciones */
+section {
+    height: 100vh; /* Cada sección ocupa el 100% de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+}
+
+/* Alternancia de grises en los fondos de las secciones */
+section:nth-child(odd) {
+    background-color: #f7f7f7; /* Gris claro */
+}
+
+section:nth-child(even) {
+    background-color: #eaeaea; /* Gris más oscuro */
+}
+
+/* Estilo del h1 con fuente cursiva */
+h1 {
+    font-family: 'Great Vibes', cursive; /* Fuente cursiva */
+    font-size: 5rem; /* Tamaño aumentado del h1 */
+    color: #FF6F61; /* Salmón vibrante */
+    margin-bottom: 10px;
+}
+
+/* Alternar colores de h2 entre salmón y violeta */
+h2:nth-of-type(odd) {
+    color: #FF6F61; /* Color salmón */
+}
+
+h2:nth-of-type(even) {
+    color: #6A0DAD; /* Violeta */
+}
+
+h2 {
+    font-size: 2rem; /* Tamaño reducido de h2 */
+    margin: 20px 0; /* Margen vertical */
+}
+
+/* Espaciado específico para la tercera sección */
+section:nth-of-type(3) h2:first-of-type {
+    margin-bottom: 40px; /* Mayor separación del segundo h2 */
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #333333; /* Gris oscuro */
+}
+
+/* Estilo de las imágenes */
+img {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Asegura que las imágenes sean cuadradas para hacer el círculo */
+    border-radius: 50%; /* Hace que las imágenes sean circulares */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    object-fit: cover; /* Asegura que la imagen llene el contenedor sin distorsionarse */
+}
+
+/* Alinear texto a la izquierda */
+.content div {
+    text-align: left; /* Alinea el texto dentro del div a la izquierda */
+}
+
+/* Estilo para el contenedor de contenido */
+.content {
+    display: flex; /* Usa Flexbox para alinear elementos en fila */
+    align-items: center; /* Centra verticalmente los elementos */
+    max-width: 800px; /* Opcional: Limitar el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Espaciado específico para la imagen */
+.content img {
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+}
+
+
+
+/* Estilo del botón */
+button {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #6A0DAD; /* Color de fondo violeta */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1rem; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s; /* Efecto de transición al pasar el ratón */
+}
+
+button:hover {
+    background-color: #FF6F61; /* Cambia el color al pasar el ratón */
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #FF6F61;
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alinear texto al centro */
+    position: relative; /* Permitir el ajuste del footer en dispositivos móviles */
+    bottom: 0; /* Mantener el footer en la parte inferior */
+    width: 100%; /* Asegurarse de que el footer ocupe todo el ancho */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para el footer */
+}
+
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+footer p::before {
+    content: "💞 ";
+}
